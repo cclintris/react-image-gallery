@@ -1,0 +1,17 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "cclin",
+  "license": "ISC",
+  "dependencies": {
+    "cloudinary": "^1.25.1",
+    "dotenv": "^9.0.2",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7"
+  }
+}
