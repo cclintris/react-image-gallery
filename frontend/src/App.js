@@ -1,12 +1,18 @@
 import React from "react";
-import Upload from "./components/Upload";
+import "./App.css";
+import Upload from "./pages/Upload";
 import Home from "./pages/Home";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 const App = () => {
   return (
     <div>
-      <Upload />
-      <Home />
+      <Router>
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/upload" component={Upload} />
+        </Switch>
+      </Router>
     </div>
   );
 };
