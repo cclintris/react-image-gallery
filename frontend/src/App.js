@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import Upload from "./pages/Upload";
+import Uploader from "./pages/Uploader";
 import Home from "./pages/Home";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -10,7 +10,7 @@ const App = () => {
       <Router>
         <Switch>
           <Route path="/" exact component={Home} />
-          <Route path="/upload" component={Upload} />
+          <Route path="/upload" component={Uploader} />
         </Switch>
       </Router>
     </div>
