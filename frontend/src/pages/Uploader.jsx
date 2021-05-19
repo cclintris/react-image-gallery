@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../styles/Uploader.css";
-import { Upload, message } from "antd";
+import { Upload, Image, Button } from "antd";
 import { InboxOutlined } from "@ant-design/icons";
 
 const { Dragger } = Upload;
@@ -38,32 +38,50 @@ const Uploader = () => {
   };
 
   return (
-    <div className="uploader">
-      <Dragger
-        name="file"
-        multiple={false}
-        onChange={handleFileInputChange}
-        // action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
-        // previewFile={previewFile}
-        style={{ width: "600px" }}
-        className="dragger"
-      >
-        <p className="ant-upload-drag-icon">
-          <InboxOutlined />
-        </p>
-        <p className="ant-upload-text">
-          Click or drag file to this area to upload
-        </p>
-        <p className="ant-upload-hint">
-          Support for a single or bulk upload. Strictly prohibit from uploading
-          company data or other band files
-        </p>
-      </Dragger>
-      {previewSource && (
-        <img alt="chosen" src={previewSource} style={{ height: "300px" }} />
-      )}
+    <div className="box">
+      <div className="central">
+        <Dragger
+          name="file"
+          multiple={false}
+          onChange={handleFileInputChange}
+          style={{
+            width: "500px",
+            marginTop: "20px",
+          }}
+        >
+          <p className="ant-upload-drag-icon">
+            <InboxOutlined />
+          </p>
+          <p className="ant-upload-text">
+            Click or drag file to this area to upload
+          </p>
+          <p className="ant-upload-hint">
+            Support for a single or bulk upload. Strictly prohibit from
+            uploading company data or other band files
+          </p>
+        </Dragger>
+      </div>
+      <div className="central">
+        <Image.PreviewGroup>
+          {previewSource && (
+            <Image
+              style={{ marginTop: "20px", marginBottom: "20px" }}
+              src={previewSource}
+              width={`35vw`}
+            />
+          )}
+        </Image.PreviewGroup>
+      </div>
+      <div className="central">
+        <Button
+          type="primary"
+          style={{ marginTop: "10px" }}
+          onClick={handleSubmitFile}
+        >
+          Upload
+        </Button>
+      </div>
     </div>
-    // <div>
   );
 };
 

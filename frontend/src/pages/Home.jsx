@@ -18,9 +18,13 @@ const Home = (props) => {
     }
   };
 
-  // useEffect(() => {
-  //   loadImages();
-  // }, [imageIds]);
+  useEffect(() => {
+    loadImages();
+
+    // return () => {
+    //   setImageIds(null);
+    // };
+  }, [imageIds]);
 
   return (
     <Layout style={{ height: "100vh" }}>

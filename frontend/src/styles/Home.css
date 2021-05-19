@@ -10,6 +10,9 @@
 .content {
     overflow: scroll;
     padding: 10px;
+    /* display: grid;
+    grid-template-columns: 400px;
+    grid-template-rows: 20%; */
 }
 
 .footer {

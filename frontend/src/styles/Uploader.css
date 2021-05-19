@@ -1,7 +1,10 @@
-.uploader {
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.box {
+  height: 100vh;
+  background-color: #fdfcf8;
+}
+
+.central {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
